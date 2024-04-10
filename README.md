@@ -4,3 +4,5 @@ This project shows phots and data of sunrise and sunset for jerusalem city in Is
 
 ## installation instructions:
 You can install using; $ git clone https://github.com/Shamimlytton2024/Project-1-phase1.git $ npm install 
+### License
+This project is licensed under the MIT License.
