@@ -1,4 +1,4 @@
-# project name:
+# project name: Phase 1 PROJECT-1
 Sunrise and Sunshine data for Jerusalem City.
 This project shows phots and data of sunrise and sunset for jerusalem city in Israel.
 
