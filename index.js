@@ -27,19 +27,32 @@ async function getData(lat, long){
         return resp.results
 }
 document.addEventListener("DOMContentLoaded" ,()=> {
-  FormData.addEventListener("submit" , (event)=> {
-    Input.value = ""
-  })
-  fetch("https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}&timezone=GMT/Jerusalem&date=2024-04-11`")
-  .then(res => res.json)
-  .then(data => {
-    let res = getData(31.771959, 35.217018)
-    console.log(results)
+  let form = document.querySelector("form");
+  
+  let input = document.getElementById("input")
 
-    document.getElementById('sunrise'),innerHtml = data.results.sunrise;
-    document.getElementById('sunset'),innerHtml = data.results.sunset;
+
+
+  form.addEventListener("submit" , (event)=> {
+    event.preventDefault()
+    let latLo = input.value
+    let log = latLo.split(",")[0]
+    let lat = latLo.split(",")[1]
+    console.log(log, lat)
+    Input.value = "lag,lat"
+
   })
+  
+  fetch`https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}&timezone=GMT/Jerusalemi&date=2024-04-11` 
+let res = 
+  document.getElementById("sunrise").innerHTML = data.results.sunrise;
+  document.getElementById("sunset").innerHTML = data.results.sunset
 })
+
+  let res = getData(lag,lat);
+console.log(results)
+
+
 
 
 

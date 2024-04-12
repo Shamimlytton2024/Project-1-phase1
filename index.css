@@ -1,18 +1,23 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: skyblue;
+    text-decoration: underline;
+    text-decoration-color: blueviolet;
 }
 .container {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
+    background-color:skyblue;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+
+
 h1 {
     text-align: center;
-    color: #333;
+    
 }
 .sunrise-sunset {
     margin-top: 20px;
@@ -24,4 +29,6 @@ h1 {
 }
 .label {
     font-weight: bold;
+
+
 }
