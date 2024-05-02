@@ -36,23 +36,24 @@ document.addEventListener("DOMContentLoaded" ,()=> {
   form.addEventListener("submit" , (event)=> {
     event.preventDefault()
     let latLo = input.value
-    let log = latLo.split(",")[0]
+    let long = latLo.split(",")[0]
     let lat = latLo.split(",")[1]
-    console.log(log, lat)
-    Input.value = "lag,lat"
+    console.log(long, lat)
+    Input.value = "log,lat"
 
   })
   
   fetch`https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}&timezone=GMT/Jerusalemi&date=2024-04-11` 
-let res = 
-  document.getElementById("sunrise").innerHTML = data.results.sunrise;
-  document.getElementById("sunset").innerHTML = data.results.sunset
+let (res => res.json ())
+.then(data => {
+  let res = getData(log,lat);
+  console.log(results)
+
 })
-
-  let res = getData(lag,lat);
-console.log(results)
-
-
+  
+ document.getElementById("sunrise").innerHTML = data.results.sunrise
+ document.getElementById("sunset").innerHTML = data.results.sunset
+})
 
 
 
